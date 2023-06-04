@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/section-hero.html')
+      @include('partials/section-instruction.html')
+      @include('partials/section-advantages.html')
+      @include('partials/section-share.html')
+      @include('partials/section-info.html')
+      @include('partials/section-portfolio.html')
+      @include('partials/section-tariff.html')
+      @include('partials/section-form.html')
+      <button class="btn-reset btn btn-up btn-up__hide">
+        <i class="fa-solid fa-chevron-up" id="btnScrollTop"></i>
+      </button>
+    </main>
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+  <script>
+    $(document).ready(function () {
+      NProgress.start();
+      setTimeout(function () {
+        NProgress.done();
+      })
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+.hero {
+  &__container {
+    margin-bottom: 100px;
+    background-image: url("../img/hero-img.png");
+    background-position: bottom right;
+    background-size: 921px auto;
+    background-repeat: no-repeat;
+
+    @include high-desktop {
+      background-size: 800px;
+    }
+
+    @include tablet {
+      background-size: 600px;
+    }
+
+    @include small-tablet {
+      background-image: url("../img/hero-img-mob.png");
+      background-size: 200px;
+    }
+
+    @include mobile {
+      background-size: 250px;
+    }
+
+    @include small-mobile {
+      background-size: 270px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 90px;
+    max-width: 835px;
+
+    @include tablet {
+      margin-bottom: 70px;
+      max-width: 500px;
+    }
+
+    @include mobile {
+      margin-bottom: 130px;
+      max-width: 100%;
+    }
+
+    @include small-mobile {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 45px 35px;
+    width: 100%;
+    max-width: 550px;
+    gap: 35px;
+
+    @include tablet {
+      padding: 35px;
+    }
+
+    @include mobile {
+      padding: 35px 25px;
+      max-width: 380px;
+    }
+
+    @include small-mobile {
+      padding: 30px 15px;
+      max-width: 100%;
+    }
+  }
+
+  &__descr {
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    p {
+      margin: 0;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &__btn {
+    @include mobile {
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 134.8%;
+    letter-spacing: 0.03em;
+
+    span {
+      border-bottom: 1px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    @include tablet {
+      font-size: 48px;
+    }
+
+    @include mobile {
+      font-size: 38px;
+    }
+
+    @include small-mobile {
+      font-size: 28px;
+    }
+  }
+
+  @include mobile {
+    gap: 10px;
+  }
+}

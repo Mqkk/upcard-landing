@@ -1,0 +1,162 @@
+.nav {
+  position: absolute;
+  left: -700px;
+  top: 0;
+  z-index: 10;
+  overflow: auto;
+  width: 380px;
+  height: 100%;
+  background-color: var(--bg-menu-color);
+  transition: left 0.1s ease-in-out;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    padding: 20px;
+    padding-bottom: 80px;
+
+    @include big-desktop {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 0;
+      padding: 0;
+      min-height: 42px;
+      gap: 32px;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__item {
+    &:last-child {
+      margin-top: 30px;
+    }
+
+    @include big-desktop {
+      display: flex;
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--dark-gray-color);
+    width: 100%;
+    height: 75px;
+    color: var(--light-color);
+    transition: all 0.1s ease-in-out;
+
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      letter-spacing: 0.02em;
+      color: var(--light-color);
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+    }
+
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      color: var(--dark-gray-color);
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: var(--orange-color);
+      color: var(--orange-color);
+
+      i {
+        color: var(--light-color);
+      }
+    }
+
+    @include big-desktop {
+      border-right: 1px solid var(--dark-gray-color);
+      border-bottom: 0;
+      padding-right: 32px;
+      height: 22px;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: lowercase;
+    }
+
+    @include small-tablet {
+      height: 70px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+
+    @include mobile {
+      height: 45px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__balance {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    color: var(--orange-color);
+  }
+
+  @include big-desktop {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: inherit;
+  }
+
+  @include small-tablet {
+    top: 0;
+    width: 350px;
+  }
+
+  @include mobile {
+    top: 0;
+    width: 100%;
+  }
+}
+
+.menu--active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,37 @@
+/* stylelint-disable color-function-notation */
+.block-illumination:hover .block-illumination::after {
+  opacity: 1;
+}
+
+.block-illumination {
+  position: relative;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.block-illumination:hover::before {
+  opacity: 1;
+}
+
+.block-illumination::before,
+.block-illumination::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.block-illumination::before {
+  z-index: 0;
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(58, 58, 58, 40%), transparent 40%);
+}
+
+.block-illumination::after {
+  z-index: 1;
+  background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(59, 59, 59, 90%), transparent 40%);
+}

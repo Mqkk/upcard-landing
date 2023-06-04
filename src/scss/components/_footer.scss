@@ -1,0 +1,119 @@
+.footer {
+  padding: 95px 0;
+  background-color: var(--black-color);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 70px;
+    gap: 20px;
+
+    @include l-desktop {
+      grid-template-columns: repeat(9, 1fr);
+      row-gap: 50px;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(6, 1fr);
+      margin-bottom: 50px;
+      row-gap: 40px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 40px;
+      row-gap: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-column: 3 span;
+    gap: 30px;
+
+    @include l-desktop {
+      &:first-child {
+        grid-column: 9 span;
+      }
+    }
+
+    @include tablet {
+      gap: 20px;
+
+      &:first-child {
+        grid-column: 6 span;
+      }
+    }
+
+    @include mobile {
+      border-bottom: 1px solid var(--gray-color);
+      padding-bottom: 20px;
+      gap: 20px;
+
+      &:first-child {
+        grid-column: 3 span;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__logo {
+    grid-column: 12 span;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--light-color);
+    padding-top: 40px;
+
+    &-link {
+      text-decoration: underline;
+      color: var(--light-color);
+
+      &:hover {
+        color: var(--orange-color);
+      }
+
+      @include mobile {
+        margin-right: 10px;
+      }
+    }
+
+    @include tablet {
+      padding-top: 20px;
+    }
+  }
+
+  @include tablet {
+    padding: 70px 0;
+    padding-bottom: 95px;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+    padding-bottom: 80px;
+  }
+}
+
+.add-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__link {
+    color: var(--light-color);
+
+    &:hover {
+      color: var(--orange-color);
+    }
+  }
+}

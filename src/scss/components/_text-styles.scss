@@ -1,0 +1,54 @@
+.title-h2 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 115%;
+  text-align: center;
+
+  @include tablet {
+    font-size: 28px;
+  }
+
+  @include mobile {
+    font-size: 22px;
+  }
+}
+
+.title-h3 {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+
+  @include tablet {
+    font-size: 22px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.text-little {
+  margin: 0;
+  font-size: 14px;
+}
+
+.text-regular {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+  }
+}

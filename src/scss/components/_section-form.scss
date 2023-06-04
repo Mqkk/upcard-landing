@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include mobile {
+      gap: 10px;
+    }
+  }
+
+  &__descr {
+    max-width: 620px;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: var(--light-color);
+  }
+
+  @include small-tablet {
+    gap: 30px;
+  }
+}

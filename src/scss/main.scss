@@ -1,0 +1,31 @@
+// база
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// небольшие компоненты
+@import "./components/text-styles";
+@import "./components/btn";
+@import "./components/burger";
+@import "./components/form";
+@import "./components/logo";
+@import "./components/tabs";
+@import "./components/swiper";
+@import "./components/social-link";
+@import "./components/scroll-top";
+@import "./components/animation-icon";
+@import "./components/block-illumination";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/nav";
+@import "./components/section-hero";
+@import "./components/section-instruction";
+@import "./components/section-advantages";
+@import "./components/section-share";
+@import "./components/section-info";
+@import "./components/section-portfolio";
+@import "./components/section-tariff";
+@import "./components/section-form";
+@import "./components/footer";

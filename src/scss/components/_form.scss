@@ -1,0 +1,82 @@
+.input {
+  border-bottom: 1px solid var(--light-color);
+  border-left: 1px solid var(--light-color);
+  padding: 12px 20px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: var(--light-color);
+  background-color: inherit;
+  transition: all 0.1s ease-in-out;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--dark-gray-color);
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
+  }
+
+  @include small-tablet {
+    padding: 8px 15px;
+  }
+
+  @include mobile {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+
+  span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+}
+
+.input:focus + span {
+  color: var(--accent-color);
+}
+
+.just-validate-error-label {
+  /* stylelint-disable-next-line declaration-no-important */
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+  border-radius: 2px;
+  padding: 0 5px;
+  font-size: 10px;
+  line-height: 150%;
+  color: var(--light-color) !important;
+  background-color: var(--accent-color);
+}
+
+.textarea {
+  outline: none;
+  border-top: none;
+  border-right: none;
+  resize: none;
+}

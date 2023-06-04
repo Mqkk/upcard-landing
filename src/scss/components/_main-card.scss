@@ -1,0 +1,84 @@
+.main-card {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 30px;
+  gap: 20px;
+
+  &__img {
+    width: 225px;
+    height: auto;
+    max-height: 225px;
+
+    img {
+      border-radius: var(--b-radius);
+      width: 100%;
+      height: 100%;
+      box-shadow: var(--shadow-element-min);
+    }
+
+    @include small-tablet {
+      width: 180px;
+      max-height: 180px;
+    }
+
+    @include mobile {
+      width: 70px;
+      max-height: 70px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 15px;
+      height: 15px;
+      font-size: 14px;
+      color: var(--accent-color);
+    }
+
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &:hover {
+      i {
+        color: var(--orange-color);
+      }
+    }
+  }
+
+  @include small-tablet {
+    padding: 20px;
+  }
+
+  @include mobile {
+    padding: 5px;
+    min-height: 170px;
+    gap: 10px;
+  }
+}

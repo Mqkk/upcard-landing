@@ -1,0 +1,70 @@
+.swiper {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+
+  &-wrapper {
+    height: 560px;
+
+    @include tablet {
+      height: 400px;
+    }
+
+    @include small-tablet {
+      height: 480px;
+    }
+  }
+
+  &-slide {
+    border-radius: 10px;
+  }
+
+  &-pagination {
+    z-index: 10;
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1120px;
+
+    &-bullet {
+      border-radius: 0;
+      width: 100%;
+      height: 1px;
+      background-color: inherit;
+
+      &-active {
+        background-color: var(--light-color);
+      }
+    }
+  }
+
+  &-button {
+    top: auto;
+    bottom: 0;
+    width: 70px;
+    height: 70px;
+    color: var(--light-color);
+    scale: 0.6;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    @include small-mobile {
+      top: 50%;
+    }
+  }
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: auto;
+  bottom: -50px;
+
+  @include high-desktop {
+    padding: 0 15px;
+  }
+
+  @include mobile {
+    bottom: -40px;
+  }
+}

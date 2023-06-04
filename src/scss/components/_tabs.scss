@@ -1,0 +1,61 @@
+/* stylelint-disable order/order */
+.tabs {
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+    gap: 20px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 3 span;
+
+      @include tablet {
+        grid-column: 6 span;
+      }
+
+      @include small-mobile {
+        grid-column: 4 span;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      height: 54px;
+      text-align: center;
+      color: var(--light-color);
+
+      @include tablet {
+        border-bottom: 1px solid var(--gray-color);
+      }
+
+      &:focus,
+      &--active {
+        border-bottom: 1px solid var(--light-color);
+        background-color: inherit;
+      }
+
+      &:hover {
+        border-bottom: 1px solid var(--gray-color);
+      }
+    }
+
+    @include tablet {
+      column-gap: 40px;
+      row-gap: 30px;
+    }
+
+    @include mobile {
+      column-gap: 30px;
+      row-gap: 30px;
+    }
+
+    @include small-mobile {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

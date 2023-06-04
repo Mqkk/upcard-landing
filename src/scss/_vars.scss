@@ -1,0 +1,44 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+// для использования sass-переменных - удалить root
+// colors
+:root {
+  // base
+  --font-family: "PT Mono", sans-serif;
+  --font-family--add: "PT Sans", sans-serif;
+  --content-width: 1120px;
+  --content-width--big: 1380px;
+  --content-fluid-width: 1790px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width--big: calc(var(--content-width--big) + (var(--container-offset) * 2));
+  --container--fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+  --bg-width: 10000px;
+
+  // colors
+  --light-color: #fff;
+  --black-color: #1a1a1a;
+  --dark-color: #1e1e1e;
+  --accent-color: #ff5c00;
+  --accent-dark-color: #e05200;
+  --orange-color: #ff8743;
+  --bg-color: linear-gradient(180deg, #313131 0%, #1e1e1e 100%);
+  --gray-color: #868686;
+  --dark-gray-color: #565656;
+  --bg-menu-color: rgba(30, 30, 30, 98%);
+
+  // color-glass
+  // radial-gradient(100% 235.8% at 0% 0%, #242424 0%, rgba(78, 78, 78, 0%) 100%, rgba(0, 0, 0, 0%) 100%);
+  /* stylelint-disable-next-line max-line-length */
+  // radial-gradient(87.01% 270.41% at 109.45% 107.87%, #2f2f2f 0%, rgba(105, 105, 105, 0%) 100%), radial-gradient(72.31% 224.66% at -9.82% -9.33%, #3e3e3e 0%, rgba(100, 100, 100, 0%) 100%);
+  --border-color: #494949;
+
+  // radius
+  --b-radius-second: 5px;
+  --b-radius: 10px;
+
+  // shadow
+  --backdrop-filter: blur(10px);
+  --shadow-element: 0 2px 7px rgba(0, 0, 0, 50%);
+  --shadow-element-min: 0 2px 7px rgba(0, 0, 0, 20%);
+}

@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+
+  &__right {
+    border-bottom: 1px solid var(--light-color);
+  }
+
+  &__left {
+    font-family: var(--font-family--add);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
+}
